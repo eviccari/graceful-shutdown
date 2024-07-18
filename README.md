@@ -59,7 +59,7 @@ func main() {
 	fDB := &FakeDB{}
 
 	// inject the fDB into your awesome component
-    go NewBusinessLogic(fDB).Execute()
+	go NewBusinessLogic(fDB).Execute()
 
 	terminate := make(chan bool, 1) // to hold the flow after OS syscall requirements
 	go func() {
